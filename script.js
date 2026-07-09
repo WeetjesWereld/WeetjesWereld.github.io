@@ -1,16 +1,38 @@
-function filter(categorie){
+// =================================
+// Weetjes Wereld - Script
+// =================================
 
-    let kaarten=document.querySelectorAll(".kaart");
+
+// Zoekfunctie
+
+const zoekveld = document.getElementById("search");
 
 
-    kaarten.forEach(kaart=>{
+if (zoekveld) {
 
-        if(categorie==="alles" || kaart.classList.contains(categorie)){
-            kaart.style.display="block";
-        }
-        else{
-            kaart.style.display="none";
-        }
+    zoekveld.addEventListener("input", function () {
+
+        let zoekterm = zoekveld.value.toLowerCase();
+
+        let kaarten = document.querySelectorAll(".kaart");
+
+
+        kaarten.forEach(function(kaart) {
+
+            let tekst = kaart.innerText.toLowerCase();
+
+
+            if (tekst.includes(zoekterm)) {
+
+                kaart.style.display = "block";
+
+            } else {
+
+                kaart.style.display = "none";
+
+            }
+
+        });
 
     });
 
@@ -18,22 +40,64 @@ function filter(categorie){
 
 
 
-document.getElementById("search").addEventListener("keyup",function(){
+// Categorie filter
 
-    let zoek=this.value.toLowerCase();
-
-    document.querySelectorAll(".kaart").forEach(kaart=>{
-
-        let tekst=kaart.innerText.toLowerCase();
+function filter(categorie) {
 
 
-        if(tekst.includes(zoek)){
-            kaart.style.display="block";
+    let kaarten = document.querySelectorAll(".kaart");
+
+
+    kaarten.forEach(function(kaart) {
+
+
+        if (categorie === "alles") {
+
+            kaart.style.display = "block";
+
         }
-        else{
-            kaart.style.display="none";
+
+
+        else if (kaart.classList.contains(categorie)) {
+
+            kaart.style.display = "block";
+
         }
+
+
+        else {
+
+            kaart.style.display = "none";
+
+        }
+
 
     });
 
-});
+
+}
+
+
+
+
+// Willekeurig weetje
+
+function willekeurigWeetje() {
+
+
+    let nummer = Math.floor(
+        Math.random() * weetjesDatabase.length
+    );
+
+
+    let weetje = weetjesDatabase[nummer];
+
+
+    alert(
+        "💡 Wist je dat...\n\n" +
+        weetje.titel +
+        "\n\n" +
+        weetje.tekst
+    );
+
+
