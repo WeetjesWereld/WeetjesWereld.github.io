@@ -1,105 +1,152 @@
-/* ==========================
-   Weetjes Wereld - Style
-   ========================== */
+/* =====================================
+   WEETJES WERELD - COMPLETE STYLE
+   ===================================== */
 
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
 body {
+
     font-family: Arial, Helvetica, sans-serif;
+
     background: #f4f7fb;
+
     color: #333;
+
     line-height: 1.6;
+
 }
 
 
-/* HEADER */
+
+/* ================= HEADER ================= */
+
 
 header {
-    background: linear-gradient(135deg, #0077ff, #00c6ff);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
+
+    background: linear-gradient(135deg,#0066ff,#00c6ff);
+
+    color:white;
+
+    text-align:center;
+
+    padding:60px 20px;
+
 }
 
 
 header h1 {
-    font-size: 45px;
-    margin-bottom: 15px;
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
 }
 
 
 header p {
-    font-size: 20px;
-    margin-bottom: 30px;
+
+    font-size:20px;
+
+    margin-bottom:30px;
+
 }
+
 
 
 #search {
-    width: 90%;
-    max-width: 550px;
-    padding: 16px 20px;
-    border-radius: 30px;
-    border: none;
-    font-size: 17px;
-    outline: none;
+
+    width:90%;
+
+    max-width:550px;
+
+    padding:16px 25px;
+
+    border:none;
+
+    border-radius:40px;
+
+    font-size:17px;
+
+    outline:none;
+
 }
 
 
-/* NAVIGATIE */
+
+/* ================= NAVIGATIE ================= */
+
 
 nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    padding: 25px;
-    background: white;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    padding:25px;
+
 }
+
 
 
 nav button {
 
-    border: none;
-    background: #0077ff;
-    color: white;
 
-    padding: 12px 22px;
+    background:#0077ff;
 
-    border-radius: 30px;
+    color:white;
 
-    cursor: pointer;
+    border:none;
 
-    font-size: 15px;
+    padding:12px 22px;
 
-    transition: 0.3s;
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    transition:.3s;
+
 
 }
 
 
 nav button:hover {
 
-    background: #005fcc;
-    transform: translateY(-2px);
+
+    background:#0055cc;
+
+    transform:translateY(-3px);
+
 
 }
 
 
 
-/* CONTENT */
+/* ================= CONTENT ================= */
+
 
 main {
 
-    max-width: 1100px;
 
-    margin: auto;
+    max-width:1100px;
 
-    padding: 30px 20px;
+    margin:auto;
+
+    padding:30px 20px;
+
 
 }
 
@@ -107,17 +154,19 @@ main {
 
 .kaart {
 
-    background: white;
 
-    border-radius: 20px;
+    background:white;
 
-    overflow: hidden;
+    border-radius:20px;
 
-    margin-bottom: 35px;
+    overflow:hidden;
 
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    margin-bottom:35px;
 
-    transition: 0.3s;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
 
 }
 
@@ -125,9 +174,11 @@ main {
 
 .kaart:hover {
 
-    transform: translateY(-6px);
 
-    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
 
 }
 
@@ -135,11 +186,13 @@ main {
 
 .kaart img {
 
-    width: 100%;
 
-    height: 280px;
+    width:100%;
 
-    object-fit: cover;
+    height:280px;
+
+    object-fit:cover;
+
 
 }
 
@@ -147,9 +200,11 @@ main {
 
 .kaart h2 {
 
-    padding: 25px 25px 10px;
 
-    color: #0077ff;
+    padding:25px 25px 10px;
+
+    color:#0066ff;
+
 
 }
 
@@ -157,30 +212,32 @@ main {
 
 .kaart p {
 
-    padding: 0 25px 30px;
 
-    font-size: 17px;
+    padding:0 25px 30px;
+
+    font-size:17px;
+
 
 }
 
 
 
-/* ADVERTENTIE */
+/* ================= ADVERTENTIE ================= */
 
 
 .advertentie {
 
-    background: white;
 
-    border-radius: 15px;
+    background:white;
 
-    padding: 25px;
+    border-radius:20px;
 
-    margin: 40px 0;
+    padding:30px;
 
-    text-align: center;
+    margin:40px 0;
 
-    min-height: 120px;
+    text-align:center;
+
 
 }
 
@@ -188,30 +245,66 @@ main {
 
 .advertentie p {
 
-    font-size: 12px;
 
-    color: #888;
+    color:#888;
 
-    margin-bottom: 10px;
+    font-size:12px;
+
+    margin-bottom:10px;
+
 
 }
 
 
 
-/* VERBORGEN FILTER */
+/* ================= WEETJE KNOP ================= */
 
-.verbergen {
 
-    display:none;
+.weetje-knop {
+
+
+    display:block;
+
+    margin:40px auto;
+
+    padding:16px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#00a86b;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 
 }
 
 
 
-/* FOOTER */
+.weetje-knop:hover {
+
+
+    background:#008955;
+
+    transform:scale(1.05);
+
+
+}
+
+
+
+/* ================= FOOTER ================= */
 
 
 footer {
+
 
     background:#222;
 
@@ -223,28 +316,34 @@ footer {
 
     margin-top:50px;
 
+
 }
 
 
 
 footer a {
 
+
     color:white;
 
     text-decoration:none;
 
+
 }
+
 
 
 footer a:hover {
 
+
     text-decoration:underline;
+
 
 }
 
 
 
-/* MOBIEL */
+/* ================= MOBIEL ================= */
 
 
 @media(max-width:700px){
@@ -252,7 +351,7 @@ footer a:hover {
 
 header {
 
-    padding:40px 15px;
+    padding:45px 15px;
 
 }
 
@@ -262,6 +361,7 @@ header h1 {
     font-size:32px;
 
 }
+
 
 
 header p {
@@ -282,7 +382,7 @@ nav button {
 
 .kaart img {
 
-    height:200px;
+    height:210px;
 
 }
 
