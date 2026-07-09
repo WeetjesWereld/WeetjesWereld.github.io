@@ -101,3 +101,59 @@ function willekeurigWeetje() {
     );
 
 
+}
+
+
+
+// Automatisch extra weetjes laden
+
+function laadWeetjes() {
+
+
+    let container = document.getElementById("weetjes");
+
+
+    if (!container) return;
+
+
+
+    weetjesDatabase.forEach(function(weetje) {
+
+
+        let kaart = document.createElement("section");
+
+
+        kaart.className = 
+        "kaart " + weetje.categorie;
+
+
+
+        kaart.innerHTML = `
+
+        <h2>${weetje.titel}</h2>
+
+        <p>
+        ${weetje.tekst}
+        </p>
+
+        `;
+
+
+
+        container.appendChild(kaart);
+
+
+    });
+
+
+}
+
+
+
+// Start website
+
+window.onload = function() {
+
+    laadWeetjes();
+
+};
