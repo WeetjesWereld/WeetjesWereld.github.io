@@ -44,7 +44,6 @@ if (zoekveld) {
 
 function filter(categorie) {
 
-
     let kaarten = document.querySelectorAll(".kaart");
 
 
@@ -57,13 +56,11 @@ function filter(categorie) {
 
         }
 
-
         else if (kaart.classList.contains(categorie)) {
 
             kaart.style.display = "block";
 
         }
-
 
         else {
 
@@ -74,7 +71,6 @@ function filter(categorie) {
 
     });
 
-
 }
 
 
@@ -83,6 +79,15 @@ function filter(categorie) {
 // Willekeurig weetje
 
 function willekeurigWeetje() {
+
+
+    if (typeof weetjesDatabase === "undefined") {
+
+        alert("De weetjesdatabase is niet geladen. Controleer weetjes.js");
+
+        return;
+
+    }
 
 
     let nummer = Math.floor(
@@ -100,20 +105,33 @@ function willekeurigWeetje() {
         weetje.tekst
     );
 
-
 }
 
 
 
-// Automatisch extra weetjes laden
+
+// Extra weetjes automatisch toevoegen
 
 function laadWeetjes() {
+
+
+    if (typeof weetjesDatabase === "undefined") {
+
+        console.log("weetjes.js niet gevonden");
+
+        return;
+
+    }
 
 
     let container = document.getElementById("weetjes");
 
 
-    if (!container) return;
+    if (!container) {
+
+        return;
+
+    }
 
 
 
@@ -123,21 +141,17 @@ function laadWeetjes() {
         let kaart = document.createElement("section");
 
 
-        kaart.className = 
-        "kaart " + weetje.categorie;
+        kaart.className = "kaart " + weetje.categorie;
 
 
 
         kaart.innerHTML = `
 
-        <h2>${weetje.titel}</h2>
+            <h2>${weetje.titel}</h2>
 
-        <p>
-        ${weetje.tekst}
-        </p>
+            <p>${weetje.tekst}</p>
 
         `;
-
 
 
         container.appendChild(kaart);
@@ -150,10 +164,10 @@ function laadWeetjes() {
 
 
 
-// Start website
+// Website starten
 
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
 
     laadWeetjes();
 
-};
+});
